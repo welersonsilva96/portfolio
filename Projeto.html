@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welerson Silva | Front-end Developer</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Inter,Arial,sans-serif;background:#0f0f12;color:#e5e5e5;cursor:default}
+.container{max-width:900px;margin:0 auto;padding:0 20px}
+header{padding:80px 20px;border-bottom:1px solid #1e1e22}
+header h1{font-size:42px} header h1 span{color:#ff3b3b}
+header p{color:#999;margin-top:10px;max-width:600px}
+.btn{display:inline-block;margin-top:15px;background:#ff3b3b;color:white;padding:10px 18px;border-radius:8px;text-decoration:none;font-weight:600}
+
+/* BARRA VERMELHA NO TOPO QUANDO ROLA */
+#progressBar{position:fixed;top:0;left:0;height:3px;background:#ff3b3b;width:0%;z-index:9999;transition:width 0.1s}
+
+/* TIMELINE */
+.timeline{position:relative;padding:60px 0 60px}
+.line{position:absolute;left:20px;top:0;bottom:0;width:2px;background:#222}
+.line-fill{position:absolute;left:20px;top:0;width:2px;height:0;background:linear-gradient(#ff3b3b,#ff6a6a);box-shadow:0 0 10px #ff3b3b88}
+.timeline-item{display:flex;gap:24px;margin-bottom:30px;margin-left:8px;opacity:0;transform:translateY(30px);transition:all 0.6s}
+.timeline-item.show{opacity:1;transform:translateY(0)}
+.dot{width:34px;height:34px;min-width:34px;border-radius:50%;background:#16161a;border:2px solid #333;display:flex;align-items:center;justify-content:center;color:#555;font-size:12px;z-index:2;transition:all 0.3s}
+.timeline-item.show .dot{border-color:#ff3b3b;color:#ff3b3b;box-shadow:0 0 15px #ff3b3b99;background:#1f0f0f}
+.card{flex:1;background:#16161a;border:1px solid #242428;border-radius:12px;padding:20px;transition:all 0.3s}
+.card:hover{border-color:#ff3b3b77;transform:translateY(-3px) scale(1.01);box-shadow:0 10px 30px #0008}
+.card h3{font-size:15px;margin-bottom:4px} .card p{color:#8c8c90;font-size:13px}
+.tag{font-size:10px;color:#ff3b3b;letter-spacing:1px}
+
+/* PROJETOS - IGUAL DO VÍDEO */
+.projects{padding:70px 0 100px;border-top:1px solid #1e1e22}
+.projects h2{font-size:32px;margin-bottom:8px} .projects h2 span{color:#ff3b3b}
+.projects .sub{color:#777;font-size:13px;margin-bottom:30px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.proj{background:#16161a;border:1px solid #242428;border-radius:12px;padding:24px;transition:.3s}
+.proj:hover{border-color:#ff3b3b55;transform:translateY(-3px)}
+.proj h4{font-size:14px} .proj p{font-size:12px;color:#8c8c90;margin:10px 0 16px}
+.proj .btn{font-size:12px}
+footer{padding:40px 0;text-align:center;color:#555;font-size:12px;border-top:1px solid #1a1a1d}
+@media(max-width:700px){.grid{grid-template-columns:1fr} header h1{font-size:32px}}
+</style>
+</head>
+<body>
+<div id="progressBar"></div>
+
+<header class="container">
+<h1>Welerson Silva <span>|</span> Front-end Developer</h1>
+<p>Desenvolvedor Front-end em formação | JavaScript | HTML5, CSS3, Bootstrap | APIs REST | Estudante de ADS 4º semestre - Anhanguera</p>
+<a class="btn" href="https://github.com/welersonsilva96" target="_blank">github.com/welersonsilva96</a>
+</header>
+
+<section class="container timeline">
+<div class="line"></div>
+<div class="line-fill" id="lineFill"></div>
+
+<div class="timeline-item"><div class="dot">01</div><div class="card"><span class="tag">FUNDAMENTOS</span><h3>Wireframes e design</h3><p>Figma, UI/UX, prototipação</p></div></div>
+<div class="timeline-item"><div class="dot">02</div><div class="card"><span class="tag">FRONT-END</span><h3>Desenvolvimento Web</h3><p>HTML5, CSS3, Bootstrap, JavaScript, APIs REST</p></div></div>
+<div class="timeline-item"><div class="dot">03</div><div class="card"><span class="tag">LÓGICA</span><h3>Lógica de Programação</h3><p>Algoritmos e resolução de problemas</p></div></div>
+<div class="timeline-item"><div class="dot">04</div><div class="card"><span class="tag">BACK-END</span><h3>Banco de Dados</h3><p>SQL, modelagem e consultas</p></div></div>
+<div class="timeline-item"><div class="dot">05</div><div class="card"><span class="tag">INFRA</span><h3>Hardware e manutenção</h3><p>Montagem e diagnóstico</p></div></div>
+<div class="timeline-item"><div class="dot">06</div><div class="card" style="border-color:#ff3b3b55"><span class="tag">2026 • AGORA</span><h3>Construindo minha carreira</h3><p>Welerson Silva buscando estágio Front-end</p></div></div>
+</section>
+
+<section class="container projects">
+<h2>Projetos que estou <span>construindo.</span></h2>
+<p class="sub">Meus projetos práticos no GitHub: welersonsilva96</p>
+<div class="grid">
+<div class="proj">
+<h4>🔍 Consulta CEP</h4>
+<p>Projeto em JavaScript puro consumindo API ViaCEP. Validação e exibição de endereço.</p>
+<a class="btn" href="https://github.com/welersonsilva96" target="_blank">Ver no GitHub</a>
+</div>
+<div class="proj">
+<h4>💼 Em breve</h4>
+<p>Próximo: Lista de tarefas com LocalStorage e Bootstrap 5</p>
+<a class="btn" style="background:#222" href="https://github.com/welersonsilva96" target="_blank">Em desenvolvimento</a>
+</div>
+</div>
+</section>
+
+<footer>Feito por Welerson Silva • github.com/welersonsilva96 • 2026</footer>
+
+<script>
+const items = document.querySelectorAll('.timeline-item');
+const observer = new IntersectionObserver(function(entries){
+  entries.forEach(function(entry){
+    if(entry.isIntersecting) entry.target.classList.add('show');
+  });
+},{threshold:0.2});
+items.forEach(function(item){ observer.observe(item); });
+
+const lineFill = document.getElementById('lineFill');
+const progressBar = document.getElementById('progressBar');
+window.addEventListener('scroll', function(){
+  let scroll = window.scrollY;
+  let height = document.body.scrollHeight - window.innerHeight;
+  let percent = (scroll / height) * 100;
+  lineFill.style.height = percent + '%';
+  progressBar.style.width = percent + '%';
+});
+</script>
+</body>
+</html>
